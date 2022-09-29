@@ -53,7 +53,7 @@
       <section class="section hero">
         <div class="container">
           <h1 class="hero-text">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
+          <button class="hero-button button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <section class="section features">
@@ -337,6 +337,53 @@
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
+          <p class="form-name">Залиште свої дані, ми вам передзвонимо</p>
+          <form class="modal-form">
+            <div class="input-group">
+              <label class="label-name" for="name">Ім'я</label>
+            <div class="input-wrapper">
+              <input class="form-input" type="text" name="name" id="name" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            </div>
+            <div class="input-group">
+              <label class="label-name" for="tel">Телефон</label>
+            <div class="input-wrapper">
+              <input class="form-input" type="tel" name="tel" id="tel" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+            </div>
+            <div class="input-group">
+              <label class="label-name" for="mail">Пошта</label>
+            <div class="input-wrapper">
+              <input class="form-input" type="email" name="mail" id="mail" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+            </div>
+            <div class="input-group">
+              <label class="label-name" for="text">Коментар</label>
+            <textarea
+              class="form-input input-text"
+              name="text"
+              id="text"
+              placeholder="Введіть текст"
+            ></textarea>
+            </div>
+            <div class="check-wrapper">
+              <label class="label-name label-checkbox" for="check"
+                >Погоджуюся з розсилкою та приймаю
+                <a class="modal-policy" href="##">Умови договору</a></label
+              >
+              <input class="form-checkbox" type="checkbox" name="check" id="check" />
+            </div>
+            <button class="form-button button" type="submit">Відправити</button>
+          </form>
         </div>
       </div>
     </main>
@@ -357,7 +404,7 @@
           </address>
         </div>
         <div class="footer-social">
-          <p class="social-title">Приєднуйтесь</p>
+          <p class="footer-title social-title">Приєднуйтесь</p>
           <ul class="icons-list">
             <li>
               <a class="icon-link" href="#" aria-label="Інстаграм сторінка сайту">
@@ -388,6 +435,24 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-subscribe">
+          <label class="footer-title subscribe-title" for="footer-mail">Підпишіться на розсилку</label>
+          <form class="footer-form">
+            <input
+              class="footer-mail"
+              type="email"
+              name="footer-mail"
+              id="footer-mail"
+              placeholder="E-mail"
+            />
+            <button class="button footer-button" type="submit">
+              <span class="button-text">Підписатися</span>
+              <svg class="footer-button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
