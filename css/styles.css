@@ -20,6 +20,7 @@
   --input-border-color: rgba(33, 33, 33, 0.2);
   --button-hover-color: #188ce8;
   --footer-form-border-color: rgba(255, 255, 255, 0.3);
+  --form-placeholder-color: rgba(117, 117, 117, 0.5);
 
   /* TRANSITIONS */
 
@@ -604,7 +605,7 @@ img {
 }
 
 .input-group {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .label-name {
@@ -621,6 +622,7 @@ img {
   padding-left: 42px;
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
+  transition: border-color 250ms var(--timing-function);
 }
 
 .form-input:focus {
@@ -640,7 +642,9 @@ img {
   position: absolute;
   top: 50%;
   left: 15px;
+  fill: var(--title-color);
   transform: translateY(-50%);
+  transition: fill 250ms var(--timing-function);
 }
 
 .form-input.input-text {
@@ -650,22 +654,43 @@ img {
   resize: none;
 }
 
-.check-wrapper {
+.form-input.input-text::placeholder {
+  color: var(--form-placeholder-color);
+}
+
+.label-checkbox {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-}
-
-.label-name.label-checkbox {
-  margin-bottom: 0;
   font-size: 14px;
   line-height: calc(24 / 14);
 }
 
-.form-checkbox {
+.custom-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
   margin-right: 7px;
+  background-color: transparent;
+  border: 1px solid var(--title-color);
+  border-radius: 2px;
+  color: transparent;
+  transition: border-color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+}
+
+.form-checkbox:checked + .custom-checkbox {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.checkbox-icon {
+  fill: currentColor;
 }
 
 .modal-policy {
@@ -775,6 +800,7 @@ img {
   border: 1px solid var(--footer-form-border-color);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: border-color 250ms var(--timing-function);
 }
 
 .footer-mail:focus {
